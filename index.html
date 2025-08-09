@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Marasini - Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dipak Marasini - Professional portfolio showcasing expertise in accounting, logistics, and office administration.">
+    <meta name="keywords" content="Dipak Marasini, accountant, logistics, office administration, Nepal">
+    <meta name="author" content="Dipak Marasini">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dipak Marasini — Professional Portfolio">
+    <meta property="og:description" content="Professional portfolio of Dipak Marasini. Accounting, VAT, logistics, and office administration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiM2NjdlZWEiLz4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIwLjNlbSI+RDwvdGV4dD4KPC9zdmc+">
+    
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-color: #333;
+            --light-text: #666;
+            --background-overlay: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: var(--background-overlay);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .nav {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav .contact-link {
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .nav .contact-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav .contact-link:hover::before {
+            left: 100%;
+        }
+
+        .nav .contact-link:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            border-color: transparent;
+        }
+
+        .nav .contact-link.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: transparent;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 70px;
+            color: white;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border: 6px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2);
+            animation: profilePulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes profilePulse {
+            0% { 
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 30px rgba(102, 126, 234, 0.3);
+            }
+            100% { 
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 50px rgba(102, 126, 234, 0.5);
+            }
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-image.placeholder::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-image.placeholder::before {
+            content: 'DM';
+            font-weight: 900;
+            font-size: 50px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .section {
+            background: var(--background-overlay);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 35px;
+            color: var(--text-color);
+            position: relative;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 8px;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            border-radius: 4px;
+            animation: sectionPulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes sectionPulse {
+            0% { width: 30px; opacity: 0.7; }
+            100% { width: 50px; opacity: 1; }
+        }
+
+        .section h2 i {
+            margin-right: 15px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1em;
+            animation: iconBounce 3s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .experience-duties {
+            list-style: none;
+        }
+
+        .experience-duties li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .experience-duties li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1.2rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .project-card p {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .project-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .education-item {
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .education-degree {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .education-school {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .education-details {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header, .section {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-links, .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-grid, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <nav class="nav">
+                <a class="contact-link" href="#about">
+                    <i class="fas fa-user-circle"></i>
+                    About
+                </a>
+                <a class="contact-link" href="#experience">
+                    <i class="fas fa-briefcase"></i>
+                    Experience
+                </a>
+                <a class="contact-link" href="#skills">
+                    <i class="fas fa-cogs"></i>
+                    Skills
+                </a>
+                <a class="contact-link" href="#projects">
+                    <i class="fas fa-folder-open"></i>
+                    Projects
+                </a>
+                <a class="contact-link" href="#education">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </a>
+                <a class="contact-link" href="#contact">
+                    <i class="fas fa-handshake"></i>
+                    Contact
+                </a>
+            </nav>
+
+            <div class="profile-image placeholder" id="profileImage"></div>
+            <h1>Dipak Marasini</h1>
+            <p>Motivated Professional in Accounting, Logistics & Office Administration</p>
+            
+            <div class="contact-links">
+                <a class="contact-link" href="mailto:marasinidipak7@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a class="contact-link" href="https://www.linkedin.com/in/dipak-marasini-425a01156" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2><i class="fas fa-user-circle"></i> About Me</h2>
+            <div class="about-content">
+                <p>Hello, I'm Dipak Marasini, a motivated and detail-oriented professional with expertise in accounting, logistics, and office administration. My work is guided by honesty, empathy, and a disciplined work ethic. With a proactive mindset, I continuously seek ways to optimize processes and support teams to achieve success.</p>
+                
+                <p>I began my career after completing a Bachelor of Business Administration, driven by a passion for numbers and operational efficiency. Throughout my journey, I have gained extensive experience in financial management, VAT compliance, inventory control, and team leadership in manufacturing environments.</p>
+                
+                <p>I am currently completing my Master of Business Studies (MBS) in Marketing, which broadens my strategic perspective and complements my operational experience. I am committed to honesty, empathy, and respect for others, striving to be a supportive colleague and reliable professional who applies discipline and creativity to find solutions.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-title">Assistant Office Manager</div>
+                <div class="experience-company">Angel Touch Hygiene Manufacturing Pvt Ltd</div>
+                <div class="experience-date">January 2022 – August 2024</div>
+                <ul class="experience-duties">
+                    <li>Managed inventory control and optimized stock levels using the pBrain ERP system</li>
+                    <li>Oversaw team performance, ensuring production schedules and quality standards were met</li>
+                    <li>Coordinated logistics and transportation to ensure timely delivery of products</li>
+                    <li>Handled office administration tasks such as communications, filing, and phone support</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title">Accountant</div>
+                <div class="experience-company">Butwal Kaligandaki Supplier Pvt Ltd</div>
+                <div class="experience-date">2021 – 2022</div>
+                <ul class="experience-duties">
+                    <li>Managed VAT-related tasks and ensured compliance with tax regulations</li>
+                    <li>Prepared and processed complex banking documents and loan applications</li>
+                    <li>Implemented effective tax reduction strategies to support company's financial goals</li>
+                    <li>Reconciled bank statements and maintained accurate financial records</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2><i class="fas fa-cogs"></i> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-calculator"></i> Professional Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VAT Management</span>
+                        <span class="skill-tag">Banking & Loan Processing</span>
+                        <span class="skill-tag">Bank Reconciliation</span>
+                        <span class="skill-tag">Record Keeping</span>
+                        <span class="skill-tag">Inventory Management</span>
+                        <span class="skill-tag">Office Administration</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Financial Reporting</span>
+                        <span class="skill-tag">pBrain ERP Software</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-heart"></i> Personal & Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Attention to Detail</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Team Building</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2><i class="fas fa-folder-open"></i> Projects & Achievements</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ERP Implementation Project</h3>
+                    <p>Successfully implemented and managed pBrain ERP system for inventory control and production management at Angel Touch Hygiene Manufacturing.</p>
+                    <div class="project-links">
+                        <span style="color: var(--light-text);">Company Internal Project</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>VAT Compliance System</h3>
+                    <p>Developed and implemented comprehensive VAT management processes that ensured 100% compliance and reduced processing time by 40%.</p>
+                    <div class="project-links">
+                        <span style="color: var(--light-text);">Financial Management</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Logistics Optimization</h3>
+                    <p>Streamlined transportation and delivery processes, resulting in improved efficiency and reduced operational costs.</p>
+                    <div class="project-links">
+                        <span style="color: var(--light-text);">Operations Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="education-item">
+                <div class="education-degree">Master of Business Studies (Marketing)</div>
+                <div class="education-school">Tribhuvan University (Butwal Multiple Campus)</div>
+                <div class="education-details">Expected 2025</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Business Administration</div>
+                <div class="education-school">Crimson College of Technology (Pokhara University)</div>
+                <div class="education-details">Graduated 2019 | CGPA: 3.32</div>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Section -->
+        <section class="section cta-section" id="contact">
+            <h2><i class="fas fa-handshake"></i> Let's Work Together</h2>
+            <p>I'm eager to bring my skills in accounting and logistics to new projects and challenges. If you have an opportunity or project in mind, let's collaborate! I welcome the chance to discuss how we can achieve great results together.</p>
+            <a class="cta-button" href="mailto:marasinidipak7@gmail.com">
+                <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+        </section>
+    </div>
+
+    <script>
+        // Create floating particles animation
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Smooth scrolling for anchor links with active state
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Remove active class from all nav links
+                document.querySelectorAll('.nav .contact-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                if (this.classList.contains('contact-link') && this.closest('.nav')) {
+                    this.classList.add('active');
+                }
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active navigation on scroll
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav .contact-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        // Initialize particles
+        createParticles();
+
+        // Add subtle scroll effects
+        let ticking = false;
+        function updateScrollEffects() {
+            const scrolled = window.pageYOffset;
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+            ticking = false;
+        }
+
+        function requestScrollUpdate() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestScrollUpdate);
+
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateScrollEffects();
+            updateActiveNav();
+            
+            // Set initial active state
+            const firstNavLink = document.querySelector('.nav .contact-link');
+            if (firstNavLink) {
+                firstNavLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
